@@ -1,5 +1,7 @@
 package com.example.pptoy;
 
+import com.example.pptoy.ZGallery1Activity.ABC;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -17,16 +19,27 @@ import android.widget.Toast;
 @SuppressWarnings("deprecation")
 public class ChoseActivity extends Activity {
     private ImageButton imbu1,imbu2; 
-
-	
-	@Override
+    private Button b;
+    @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_chose);
 		this.imbu1=(ImageButton)super.findViewById(R.id.ci1);
 		this.imbu2=(ImageButton)super.findViewById(R.id.ci2);
+		this.b=(Button)super.findViewById(R.id.chb2);
 		imbu1.setOnClickListener(new OnClickImageone());
 		imbu2.setOnClickListener(new OnClickImagetwo());
+		b.setOnClickListener(new AA());;
+}
+	public class AA implements OnClickListener{
+
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			Intent i=new Intent();
+			i.setClass(ChoseActivity.this,HomeActivity.class);
+			startActivity(i);
+		}
 }
 
 	public class OnClickImageone implements OnClickListener{

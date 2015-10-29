@@ -48,14 +48,14 @@ public class HomeActivity extends Activity {
 			String msg2=pwd.getText().toString();
 			if(msg1.equals("admin")&&msg2.equals("123"))
 			{
-				Toast.makeText(HomeActivity.this, "登陆成功",Toast.LENGTH_SHORT).show();;
+				Toast.makeText(HomeActivity.this, "鐧婚檰鎴愬姛",Toast.LENGTH_SHORT).show();;
 				Intent i=new Intent();
 				i.setClass(HomeActivity.this,ChoseActivity.class);
 				startActivity(i);
 			}
 			else
 			{
-				Toast.makeText(HomeActivity.this, "登陆失败",Toast.LENGTH_SHORT).show();;
+				Toast.makeText(HomeActivity.this, "鐧诲綍澶辫触",Toast.LENGTH_SHORT).show();;
 			}
 			
 		}
@@ -71,7 +71,7 @@ public class HomeActivity extends Activity {
 		}
 		
 	}
-//复选框被选中，则文本框内容可见；否则文本框内容不可见
+//锟斤拷选锟斤拷选锟叫ｏ拷锟斤拷锟侥憋拷锟斤拷锟斤拷锟捷可硷拷锟斤拷锟斤拷锟斤拷锟侥憋拷锟斤拷锟斤拷锟捷诧拷锟缴硷拷
 	private class showCheckBox implements OnClickListener{
 
 		@Override

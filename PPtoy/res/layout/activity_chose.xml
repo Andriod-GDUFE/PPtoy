@@ -25,6 +25,13 @@
          android:layout_x="16dp"
          android:layout_y="10dp"
          android:src="@drawable/chosemon" />"
-    
-
+     
+       <Button
+         android:id="@+id/chb2"
+         android:layout_width="85px"
+         android:layout_height="85px"
+         android:layout_x="577px"
+         android:layout_y="0px"/>
+       
+ 
 </AbsoluteLayout>

@@ -18,17 +18,69 @@ import android.widget.Toast;
 
 @SuppressWarnings("deprecation")
 public class ChildActivity extends Activity {
-
-
-	
-	@Override
+	private ImageButton i1,i2,i3,i4,i5;
+    @Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		requestWindowFeature(Window.FEATURE_NO_TITLE);//隐藏标题
-		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);//设置全屏
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
+		getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 		setContentView(R.layout.activity_child);
+		this.i1 =(ImageButton)super.findViewById(R.id.cdib1);
+		i1.setOnClickListener(new ImageA());
+		this.i2 =(ImageButton)super.findViewById(R.id.cdib2);
+		i2.setOnClickListener(new ImageB());
+		this.i3 =(ImageButton)super.findViewById(R.id.cdib3);
+		i3.setOnClickListener(new ImageC());
+		this.i4 =(ImageButton)super.findViewById(R.id.cdib4);
+		i4.setOnClickListener(new ImageD());
+		this.i5 =(ImageButton)super.findViewById(R.id.cdib5);
+		i5.setOnClickListener(new ImageE());
+}
+public class ImageA implements OnClickListener{
+    @Override
+	public void onClick(View v) {
+	// TODO Auto-generated method stub
+		Intent i=new Intent();
+		i.setClass(ChildActivity.this,ZGallery1Activity.class);
+		startActivity(i);
 		}
-
+}
+public class ImageB implements OnClickListener{
+    @Override
+	public void onClick(View v) {
+	// TODO Auto-generated method stub
+		Intent i=new Intent();
+		i.setClass(ChildActivity.this,ZGallery2Activity.class);
+		startActivity(i);
+		}
+}
+public class ImageC implements OnClickListener{
+    @Override
+	public void onClick(View v) {
+	// TODO Auto-generated method stub
+		Intent i=new Intent();
+		i.setClass(ChildActivity.this,ZGallery3Activity.class);
+		startActivity(i);
+		}
+}
+public class ImageD implements OnClickListener{
+    @Override
+	public void onClick(View v) {
+	// TODO Auto-generated method stub
+		Intent i=new Intent();
+		i.setClass(ChildActivity.this,ZGallery4Activity.class);
+		startActivity(i);
+		}
+}
+public class ImageE implements OnClickListener{
+    @Override
+	public void onClick(View v) {
+	// TODO Auto-generated method stub
+		Intent i=new Intent();
+		i.setClass(ChildActivity.this,ZGallery5Activity.class);
+		startActivity(i);
+		}
+}
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
